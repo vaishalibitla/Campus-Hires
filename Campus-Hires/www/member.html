@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vaishali Bitla">
+    <link rel="icon" href="assets/images/hire.jpg">
+    <title>Project Work</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </head>
+  <body style="background-color:black;color:white">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Campus Hires</a>
+        </div>
+         <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/list"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+            <li><a href="about.html"><span class="glyphicon glyphicon-road"></span>&nbsp;About Us</a></li>
+            <li><a href="technologies.html"><span class="glyphicon glyphicon-book"></span>&nbsp;Technologies</a></li>
+            <li><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Contact Us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/register.html"><span class="glyphicon glyphicon-log-out">Logout</a></li>
+         </ul>
+       </div>
+      </div>
+    </nav>
+    <div class="container-fluid" >
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h1 class="page-header">Member Details</h1>
+          <form method="post" action="/save">
+            <div class="form-group">
+              <label for="inputId">ID</label>
+              <span class="form-control">{{.TargetMem.ID}}</span>
+              <input type="hidden" id="inputID" required name="id" value="{{.TargetMem.ID}}"/>
+            </div>
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <input class="form-control" id="inputName" required name="name" placeholder="Name" value="{{.TargetMem.Name}}"/>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input class="form-control" type="email" id="inputEmail" required name="email" placeholder="example@gmail.com" value="{{.TargetMem.Email}}"/>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone">Phone Number</label>
+              <input class="form-control" type="tel" id="inputPhone" required name="phone" placeholder="xxx-xxx-xxxx" value="{{.TargetMem.Phone}}"/>
+            </div>
+            <div class="form-group">
+              <label for="inputJoiningDate">Joining date</label>
+              <input class="form-control" type="date" id="inputJoiningDate" required name="joiningDate" placeholder="YYYY-MM-DD" value="{{ .TargetMem.JoiningDateStr }}"/>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="reset" class="btn btn-danger">Clear</button>
+            <a class="btn btn-primary" href="/list">Go to All Details</a>
+          </form>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </body>
+</html>

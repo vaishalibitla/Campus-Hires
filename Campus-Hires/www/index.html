@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vaishali Bitla">
+    <link rel="icon" href="assets/images/hire.jpg">
+    <title>Project Work</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel=stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </head>
+  <body style="background-color:black; color:white">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Campus Hires</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">            
+            <li class="active"><a href="/list"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+            <li><a href="about.html"><span class="glyphicon glyphicon-road"></span>&nbsp;About Us</a></li>
+            <li><a href="technologies.html"><span class="glyphicon glyphicon-book"></span>&nbsp;Technologies</a></li>
+            <li><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Contact Us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/register.html"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid" >
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h1 class="page-header">All Details</h1>
+          <div class="table-responsive">
+            <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Joining Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+                {{range .AllMembers}}
+                <tr>
+                  <td>{{.ID}}</td>
+                  <td>{{.Name}}</td>
+                  <td>{{.Email}}</td>
+                  <td>{{.Phone}}</td>
+                  <td>{{.JoiningDateStr}}</td>
+                  
+                  <td><a class="btn btn-success btn-sm" href="member.html?id={{.ID}}"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit</a> - 
+                        <a class="btn btn-danger btn-sm" href="/delete?id={{.ID}}"><span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</a></td>
+                 
+                </tr>
+                {{end}}
+                <tr>
+                 <td><a class="btn btn-primary" href="member.html"><span class="glyphicon glyphicon-plus"></span>&nbsp;New Member</a></td>
+                 <td></td>
+                 <td></td>
+              	 <td></td>
+ 	 <td></td>
+              	 <td></td>
+                 </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

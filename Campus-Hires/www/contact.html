@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vaishali Bitla">
+    <title>Project Work</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="assets/images/hire.jpg" rel="icon" >
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+       function showAlert() {
+          alert("Query sent successfully!");
+       }
+     </script>
+  </head>
+  <body style="background-color:black;color:white">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Campus Hires</a>
+         </div>
+         <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="/list"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+            <li><a href="about.html"><span class="glyphicon glyphicon-road"></span>&nbsp;About Us</a></li>
+            <li><a href="technologies.html"><span class="glyphicon glyphicon-book"></span>&nbsp;Technologies</a></li>
+            <li class="active"><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Contact Us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">           
+            <li><a href="/register.html"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
+          </ul>
+       </div>
+      </div>
+    </nav>
+    <div class="container-fluid" >
+      <div class="row">
+       <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h1 class="page-header">Queries</h1>
+          <form method="post" action="/send" onsubmit="showAlert()">
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input class="form-control" type="email" id="inputEmail" name="email" required placeholder="xyz@gmail.com"/>
+            </div>
+            <div class="form-group">
+              <label for="inputQuery">Ask your Query</label>
+              <input class="form-control" id="inputQuery" required name="query" placeholder="Type Something..."/>
+            </div>
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-send"></span>&nbsp;Send</button>
+          </form>
+          <img src="assets/images/contact.jpg" height="300px" style="display:block;margin-left: auto;margin-right: auto;width: 40%;">
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </body>
+</html>

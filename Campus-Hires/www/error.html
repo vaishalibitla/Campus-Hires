@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vaishali Bitla">
+    <link rel="icon" href="assets/images/hire.jpg">
+    <title>Project Work</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </head>
+  <body style="background-color:black;color:white;">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Campus Hires</a>
+        </div>
+         <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;Register</a></li>
+            <li class="active"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>
+          </ul>
+         </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h1 class="page-header">Error</h1>
+          {{.ErrorMsg}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

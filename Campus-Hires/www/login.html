@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vaishali Bitla">
+    <link rel="icon" href="assets/images/hire.jpg">
+    <title>Project Work</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+   
+  </head>
+  <body style="background-color:black;color:white">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Campus Hires</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;Register</a></li>
+            <li class="active"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid" >
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <h1 class="page-header">Sign In</h1>
+          <form method="post" action="/signin">
+            <div class="form-group">
+              <label for="userName">Username</label>
+              <input class="form-control" id="userName" name="username" required placeholder="username"/>
+            </div>
+            <div class="form-group">
+              <label for="inputPw">Password</label>
+              <input type="password" class="form-control" id="inputPw" name="pw" required placeholder="**********"/>
+              <i class="far fa-eye field-icon" id="togglePassword" style="cursor: pointer;float: right;color:black;margin-left: -25px;margin-top: -25px;"></i>
+            </div>
+            <button type="submit" class="btn btn-primary" style="display:block;margin-left:auto;margin-right:auto;">Login</button>
+            <br> <p align="center">Don't have an account yet? <a href="/register.html">Sign up</a>.</p>
+          </form>
+        </div>
+       <div class="col-md-4"></div>
+      </div>
+    </div>
+  </body>
+ <script>
+     const togglePassword = document.querySelector('#togglePassword');
+     const password = document.querySelector('#inputPw');
+     togglePassword.addEventListener('click', function (e) {
+     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+     password.setAttribute('type', type);
+     this.classList.toggle('fa-eye-slash');
+     });
+   </script>
+</html>
