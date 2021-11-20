@@ -8,7 +8,7 @@ import (
 const hashCost = 8
 var db *sql.DB
 func init() {
-	tmpDB, err := sql.Open("postgres", "dbname=campus_hires user=postgres password=vaish215 host=localhost sslmode=disable")
+	tmpDB, err := sql.Open("postgres", "dbname=campus_hires user=postgres password=root host=localhost sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
